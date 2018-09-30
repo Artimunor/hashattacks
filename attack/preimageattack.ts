@@ -9,17 +9,19 @@ var tag: string = "Preimage";
 
 export function attackPreimage(start: string) {
 
+    var startLower: string = start.toLowerCase();
+
     do {
         nonce++;
-        preimage = (Math.random() * nonce) + "";
+        preimage = Math.random() + "";
         hash = getSHA256Hash(preimage);
         Log.info(tag, hash);
 
-        if (hash.substring(0, start.length) == start) {
+        if (hash.substring(0, start.length) == startLower) {
             repeat = false;
-            Log.debug(tag, `preimage found for hash starting with ${start} after ${nonce} attempts!`);
-            Log.debug(tag, `preimage: ${preimage}`);
-            Log.debug(tag, `hash: ${hash}`);
+            console.log(`preimage found for hash starting with ${start} after ${nonce} attempts!`);
+            console.log(`preimage: ${preimage}`);
+            console.log(`hash: ${hash}`);
         }
 
     } while (repeat)  

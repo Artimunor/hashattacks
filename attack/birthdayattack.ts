@@ -17,7 +17,9 @@ export function attackBirthday(similarity: number) {
         for (var i = 0; i < hashes.length; i++) {
             if (hashes[i].substring(0, similarity) == newHash.substring(0, similarity)) {
                 repeat = false;
-                Log.debug(tag, `collision found between hash #${i} and hash #${hashes.length+1}!`);
+                console.log(`collision found between hash #${i} and hash #${hashes.length+1}!`);
+                console.log(`hash #${i}: ${hashes[i]}`);
+                console.log(`hash #${hashes.length+1}: ${newHash}`);
             }
         }
 

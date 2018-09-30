@@ -6,12 +6,13 @@ import { attackPreimage } from './attack/preimageattack';
 Log.level = LOG_LEVEL.DEBUG;
 
 var similarity: number = 7;
+var preimage: string = "DEFACE"
 
 function startUp (attackType: string) {
     if (attackType == "Birthday Attack") {
         attackBirthday(similarity);
     } else if (attackType = "Preimage Attack") {
-        attackPreimage("DEFACE");
+        attackPreimage(preimage);
     }
 }
 
