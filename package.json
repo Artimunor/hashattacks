@@ -1,0 +1,19 @@
+{
+  "name": "hashattacks",
+  "version": "1.0.0",
+  "description": "A series of simple implementations to showcase various type of attacks on hashing algoritms",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w -pretty",
+    "exe": "node build/index.js"
+  },
+  "author": "Daniel de Witte",
+  "license": "MIT",
+  "dependencies": {
+    "@types/inquirer": "0.0.43",
+    "inquirer": "^6.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
+}
